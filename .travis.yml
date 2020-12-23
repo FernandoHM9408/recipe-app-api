@@ -1,0 +1,11 @@
+language: python 
+python:
+  -"3.6"
+
+serevices: 
+  -docker
+
+before_script:pip install docker-compose
+
+script:
+  -docker-composerun appsh -c "python manage.py tes && flake "
